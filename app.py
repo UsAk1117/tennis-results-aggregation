@@ -18,6 +18,7 @@ def main(page: ft.Page):
 
 # Renderで動かすための必須設定
 if __name__ == "__main__":
+    # RenderでWebとして動かすための設定
+    # view=ft.AppView.WEB_BROWSER は、サーバー起動時に必須です
     port = int(os.environ.get("PORT", 8000))
-    # view=ft.AppView.WEB_BROWSER を指定してWebアプリとして起動
     ft.app(target=main, port=port, view=ft.AppView.WEB_BROWSER)
