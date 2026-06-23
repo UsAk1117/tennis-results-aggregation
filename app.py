@@ -1,17 +1,20 @@
 import os
 import flet as ft
 
-# 【クラス定義】
+# --- ここにあなたの本来のコード（クラスなど）をすべて書いてください ---
+# 例えば TennisInputFormApp の定義はここにありますよね？
 class TennisInputFormApp(ft.Control):
     def build(self):
-        # 本来のフォームの要素をここに追加
-        return ft.Text("テニス入力フォーム")
+        return ft.Text("ここに本来のフォーム画面が入ります")
+# -----------------------------------------------------------
 
-# 【メイン関数】
 def main(page: ft.Page):
-    page.add(TennisInputFormApp())
+    # ここで本来のクラスを呼び出します
+    # ※もしクラス名が TennisInputFormApp でなければ、ここを修正してください！
+    app = TennisInputFormApp()
+    page.add(app)
 
-# 【起動設定】
 if __name__ == "__main__":
+    # RenderでWebとして動かすための設定
     port = int(os.environ.get("PORT", 8000))
     ft.app(target=main, port=port, view=ft.AppView.WEB_BROWSER)
